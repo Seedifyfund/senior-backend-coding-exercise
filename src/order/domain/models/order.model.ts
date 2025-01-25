@@ -1,14 +1,14 @@
 type OrderConstructorParameters = {
   id: string;
   productId: string;
-  quantity: string;
+  quantity: number;
   userId: string;
 };
 
 export class Order {
   #id: string;
   #productId: string;
-  #quantity: string;
+  #quantity: number;
   #userId: string;
 
   constructor({ id, productId, quantity, userId }: OrderConstructorParameters) {
@@ -29,5 +29,14 @@ export class Order {
   }
   get userId() {
     return this.#userId;
+  }
+
+  orderDetails() {
+    return {
+      id: this.#id,
+      productId: this.#productId,
+      quantity: this.#quantity,
+      userId: this.#userId,
+    };
   }
 }
