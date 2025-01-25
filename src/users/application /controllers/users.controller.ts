@@ -13,12 +13,12 @@ export class UsersController {
     return this.usersService.getUserDetails(id);
   }
 
-  @Post('create-user')
+  @Post('signup')
   addUser(@Body() body: AddUserDto) {
     return this.usersService.createUser(body);
   }
 
-  @Post('update-user')
+  @Post('update-profile')
   editeUser(@Body() body: UpdateUserDto) {
     console.log(body);
     return this.usersService.updateUser(body);
