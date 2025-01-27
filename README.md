@@ -96,3 +96,100 @@ The application will run on `http://localhost:3000`.
 ### Time Estimate:
 
 The exercise should take approximately **20 minutes** to complete.
+
+
+# Senior Backend Coding Exercise Sample Payloads
+
+```bash
+    
+    Signup User
+    API: https://senior-backend-coding-exercise.fly.dev/users/signup
+    Method: POST
+    
+    Payload: {
+    "name": "steve",
+    "email": "abc@test.com",
+    "password": "encrypted"
+    }
+
+    Response: {
+    "success": true,
+    "message": "User created successfully",
+    "data": {
+        "id": "5dew2s8um",
+        "name": "abc@test.com",
+        "email": "steve",
+        "password": "encrypted"
+        }
+    }
+
+    Fetch User Details
+    API: https://senior-backend-coding-exercise.fly.dev/users/single-user/5dew2s8um
+    Method: GET
+
+    Response: 
+    {
+    "success": true,
+    "message": "User details fetched successfully",
+    "data": 
+          {
+        "id": "5dew2s8um",
+        "name": "abc@test.com",
+        "email": "steve",
+        "password": "encrypted"
+          }
+    } 
+    
+    Fetch All Users
+    API: https://senior-backend-coding-exercise.fly.dev/users/all-users
+    Method: GET
+
+    Response:
+    {
+    "success": true,
+    "message": "Users fetched successfully",
+    "data": [
+        {
+            "id": "5dew2s8um",
+            "name": "abc@test.com",
+            "email": "steve",
+            "password": "encrypted"
+        }
+    ]
+  }
+
+    Update profile
+    API: https://senior-backend-coding-exercise.fly.dev/users/update-profile
+    Method: POST
+    Payload: 
+    {
+    "userId":"fqeuzrhee",
+    "name": "tony",
+    "email": "tony@stark.in",
+    "password": "double_enc"
+    }
+
+    Response: 
+    {
+    "success": true,
+    "message": "User updated successfully"
+  }
+
+
+    Delete User
+    API: https://senior-backend-coding-exercise.fly.dev/users/delete-user
+    Method: POST
+    Payload:
+    {
+    "userId": "hsgqx70tp"
+    }
+
+    Response: 
+    {
+    "success": true,
+    "message": "User deleted successfully"
+    }
+
+
+
+```
