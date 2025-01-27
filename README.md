@@ -100,6 +100,7 @@ The exercise should take approximately **20 minutes** to complete.
 
 # Senior Backend Coding Exercise Sample Payloads
 
+### Users
 ```bash
     
     Signup User
@@ -196,6 +197,7 @@ The exercise should take approximately **20 minutes** to complete.
     }
 ```
 
+### Products
 ```bash
     Add new Products
     API: https://senior-backend-coding-exercise.fly.dev/products/create-product
@@ -284,6 +286,7 @@ The exercise should take approximately **20 minutes** to complete.
 
 ```
 
+### Orders
 ```bash
     Add Orders
     API: https://senior-backend-coding-exercise.fly.dev/order/add
