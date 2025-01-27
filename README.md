@@ -96,3 +96,252 @@ The application will run on `http://localhost:3000`.
 ### Time Estimate:
 
 The exercise should take approximately **20 minutes** to complete.
+
+
+# Senior Backend Coding Exercise Sample Payloads
+
+### Users
+```bash
+    
+    Signup User
+
+    API: https://senior-backend-coding-exercise.fly.dev/users/signup
+    Method: POST
+    
+    Payload: {
+    "name": "steve",
+    "email": "abc@test.com",
+    "password": "encrypted"
+    }
+
+    Response: {
+    "success": true,
+    "message": "User created successfully",
+    "data": {
+        "id": "5dew2s8um",
+        "name": "abc@test.com",
+        "email": "steve",
+        "password": "encrypted"
+        }
+    }
+
+    Fetch User Details
+
+    API: https://senior-backend-coding-exercise.fly.dev/users/single-user/5dew2s8um
+    Method: GET
+
+    Response: 
+    {
+    "success": true,
+    "message": "User details fetched successfully",
+    "data": 
+          {
+        "id": "5dew2s8um",
+        "name": "abc@test.com",
+        "email": "steve",
+        "password": "encrypted"
+          }
+    } 
+    
+    Fetch All Users
+
+    API: https://senior-backend-coding-exercise.fly.dev/users/all-users
+    Method: GET
+
+    Response:
+    {
+    "success": true,
+    "message": "Users fetched successfully",
+    "data": [
+        {
+            "id": "5dew2s8um",
+            "name": "abc@test.com",
+            "email": "steve",
+            "password": "encrypted"
+        }
+    ]
+  }
+
+    Update profile
+
+    API: https://senior-backend-coding-exercise.fly.dev/users/update-profile
+    Method: POST
+    Payload: 
+    {
+    "userId":"fqeuzrhee",
+    "name": "tony",
+    "email": "tony@stark.in",
+    "password": "double_enc"
+    }
+
+    Response: 
+    {
+    "success": true,
+    "message": "User updated successfully"
+  }
+
+
+    Delete User
+
+    API: https://senior-backend-coding-exercise.fly.dev/users/delete-user
+    Method: POST
+    Payload:
+    {
+    "userId": "hsgqx70tp"
+    }
+
+    Response: 
+    {
+    "success": true,
+    "message": "User deleted successfully"
+    }
+```
+
+### Products
+```bash
+    Add new Products
+    API: https://senior-backend-coding-exercise.fly.dev/products/create-product
+    Method: POST
+    Payload:
+    {
+    "name": "mobiles",
+    "description": "a simple mobile device"
+    }
+
+    Response:
+    {
+    "success": true,
+    "message": "Product created successfully",
+    "data": {
+        "id": "epefon9gr",
+        "name": "mobiles",
+        "description": "a simple mobile device"
+        }
+    }
+
+
+    Fetch Product Details
+    API: https://senior-backend-coding-exercise.fly.dev/products/single-product/epefon9gr
+    Method: GET
+
+    Response:
+    {
+    "success": true,
+    "message": "Product details fetched successfully",
+    "data": {
+        "id": "epefon9gr",
+        "name": "mobiles",
+        "description": "a simple mobile device"
+      }
+    }
+
+
+    Fetch All Products
+    API: https://senior-backend-coding-exercise.fly.dev/products/all-products
+    Method: GET
+
+    Response:
+    {
+    "success": true,
+    "message": "Products fetched successfully",
+    "data": [
+        {
+            "id": "epefon9gr",
+            "name": "mobiles",
+            "description": "a simple mobile device"
+          }
+        ]
+    }
+
+
+    Update Product
+    API: https://senior-backend-coding-exercise.fly.dev/products/update-product
+    Method: POST
+    Payload:
+    {
+    "productId":"epefon9gr",
+    "name": "Nothing Phone (1)",
+    "description": "A brand new nothing phone (1)(R)"
+    }
+
+    Response:
+    {
+    "success": true,
+    "message": "Product updated successfully"
+    }
+
+    Delete Product
+    API: https://senior-backend-coding-exercise.fly.dev/products/delete-product
+    Method: POST
+    Payload:
+    {
+    "productId": "epefon9gr"
+    }
+
+    Response:
+    {
+    "success": true,
+    "message": "Product deleted successfully"
+    }
+
+```
+
+### Orders
+```bash
+    Add Orders
+    API: https://senior-backend-coding-exercise.fly.dev/order/add
+    Method: POST
+    Payload:
+    {
+    "productId":"xh945mdtb",
+    "userId":"gvs9athpt",
+    "quantity": 2
+    }
+
+    Response:
+    {
+    "success": true,
+    "message": "Order created successfully",
+    "data": {
+        "id": "842cm5c2x",
+        "productId": "xh945mdtb",
+        "quantity": 2,
+        "userId": "gvs9athpt"
+      }
+    }
+
+
+    Fetch Product Details
+    API: https://senior-backend-coding-exercise.fly.dev/order/842cm5c2x
+    Method: GET
+    Response:
+    {
+    "success": true,
+    "message": "Order details fetched successfully",
+    "data": {
+        "id": "842cm5c2x",
+        "productId": "xh945mdtb",
+        "quantity": 2,
+        "userId": "gvs9athpt"
+        }
+    }
+
+
+    Fetch All Orders
+    API: https://senior-backend-coding-exercise.fly.dev/order/all
+    Method: GET
+    Response:
+    {
+    "success": true,
+    "message": "Orders fetched successfully",
+    "data": [
+        {
+            "id": "842cm5c2x",
+            "productId": "xh945mdtb",
+            "quantity": 2,
+            "userId": "gvs9athpt"
+            }
+        ]
+    }
+
+```
